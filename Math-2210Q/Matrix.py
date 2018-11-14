@@ -19,6 +19,9 @@ class Matrix:
     def update(self, row, col, value):
         self.matrix[row][col] = value
 
+    def swapRows(self, x, y):
+        self.matrix[x], self.matrix[y] = self.matrix[y], self.matrix[x]
+
     def __add__(self, other):
         if ((self.rows == other.rows) & (self.cols == other.cols)):
             temp = Matrix(self.rows, self.cols)
